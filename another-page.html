@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q & A</title>
+    <style>     
+        .faq {
+        width:70%;
+        margin: 0 auto;
+        }
+        .faq div {
+        border: 1px solid #000;
+        margin: 5px 0px;
+        background-color:#fff;
+        }
+        .question {
+        font-size:18px;
+        background-color: aliceblue;
+        margin:0px;
+        padding: 15px;
+        }
+        .answer {
+        font-size:16px;
+        margin:0px;
+        padding: 0px 15px;
+        line-height:2;
+        max-height:0px;
+        overflow:hidden;
+        transition:2s;
+        }
+        .opener
+        {
+        font-size:25px;
+        float: right;
+        line-height:0.8;
+        cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+    <div class="faq">
+        <div id="block">
+         <p class="question">What is DOM? What is the purpose of DOM<span onclick='faq(this)' class="opener">+</span></p>
+         <p class="answer">DOM means Document Object Model created by the browser when a web page is loaded. In graphical form, it looks like a tree of elements/nodes. <b>Purpose:</b> As DOM is a programming interface, it allows to create, change, or remove elements from a website document. DOM manipulation is when use JavaScript to add, remove, and modify elements of a website
+         </p>
+        </div>
+        <div>    
+         <p class="question">How to select element from DOM?</p>
+         <p class="answer">
+            <li><b>getElementById:</b> 
+                The selection is based on the Id name.This selector returns only the first matched element while ignoring the remaining.</li>
+            <li><b>getElementsByTagName</b>
+            This method returns all the elements that matches the specified Tag name.</li>
+            <li><b>getElementsByClassName:</b> 
+                This method returns all the elements that matches the specified Class name.</li>   
+        </p>
+        </div>
+        <div>    
+         <p class="question">What is Event bubbling?<span onclick='faq(this)' class="opener">+</span></p>
+         <p class="answer">Event bubbling is a process that starts with the element that triggered the event and then bubbles up to the containing elements in the hierarchy.The event is first captured and handled by the innermost element and then propagated to outer elements.</p>  
+        </div>
+        <div>    
+         <p class="question">What is call back function in javascript? What does it do?<span onclick='faq(this)' class="opener">+</span></p>
+         <p class="answer">A callback function is a function that is passed as an argument to another function so that it can be executed in that other function.</p>  
+        </div>
+        </div>
+        <script>
+            
+function faq(ele)
+{
+var x = ele.parentElement.nextElementSibling.style.cssText;
+if(x=='max-height: 500px;')
+{    
+ele.style.cssText='transform: rotate(0deg);';     
+ele.parentElement.nextElementSibling.style.cssText = "transition:0.3s;max-height:0px;";    
+}
+else
+{
+ele.style.cssText='transform: rotate(45deg);';   
+ele.parentElement.nextElementSibling.style.cssText = "max-height:500px;";
+}
+}
+</script>
+        
+</body>
+</html>
+
+

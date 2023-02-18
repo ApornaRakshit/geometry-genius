@@ -101,3 +101,16 @@ function displayData(geometryName,area){
     `;
     container.appendChild(tr);
 }
+
+
+
+
+var color = [, "#3C9EE7", "#E7993C",
+            "#E73C99", "#3CE746", "#E7993C","#a991f7","#ffffff","#37cdbe","#f6d860",'#1EA1F1','#1C96E1'];
+  
+        document.getElementById('card').addEventListener(
+                    "mouseover", function () {
+  
+            document.getElementById('card').style.background 
+                = color[Math.floor(Math.random() * color.length)];
+        });
