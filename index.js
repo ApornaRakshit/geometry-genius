@@ -3,16 +3,15 @@ let serial= 0;
    document.getElementById('first-card').addEventListener('click',function(){
    serial += 1;
    let geometryName = document.getElementById('first-title').innerText;
-    let geometryValue1 = document.getElementById('input-1').value;
-    let geometryValue2 = document.getElementById('input-2').value;
-    let areaOfTriangle = 0.5 * parseFloat(geometryValue1) * parseFloat(geometryValue2);
-    let area = parseFloat(areaOfTriangle).toFixed(2)
+   let geometryValue1 = document.getElementById('input-1').value;
+   let geometryValue2 = document.getElementById('input-2').value;
+   let areaOfTriangle = 0.5 * parseFloat(geometryValue1) * parseFloat(geometryValue2);
+   let area = parseFloat(areaOfTriangle).toFixed(2)
 
    displayData(geometryName,area)
 });
 
 //second card rectangle
-
    document.getElementById('second-card').addEventListener('click',function(){
     serial +=1;
     let geometryName = document.getElementById('second-title').innerText;
@@ -20,9 +19,10 @@ let serial= 0;
     let geometryValue2 = document.getElementById('second-input').value;
     let area = parseInt(geometryValue1) * parseInt(geometryValue2);
    
-   
    displayData(geometryName,area)
 });
+
+
 
 //third card Parallelogram
 document.getElementById('third-card').addEventListener('click',function(){
@@ -48,7 +48,6 @@ document.getElementById('forth-card').addEventListener('click',function(){
     console.log(geometryName,geometryValue1,geometryValue2)
     let areaOfEllipse = 0.5 * parseFloat(geometryValue1) * parseFloat(geometryValue2);
     let area = parseFloat(areaOfEllipse).toFixed(2)
-
     //show the data
     displayData(geometryName,area)
 });
@@ -60,15 +59,12 @@ document.getElementById('fifth-card').addEventListener('click',function(){
     let geometryName = document.getElementById('fifth-name').innerText;
     let geometryValue1 = document.getElementById("v-1").innerText;
     let geometryValue2 = document.getElementById("v-2").innerText;
-    console.log(geometryName,geometryValue1,geometryValue2)
-    let areaOfEllipse = 0.5 * parseFloat(geometryValue1) * parseFloat(geometryValue2);
-    let area = parseFloat(areaOfEllipse).toFixed(2)
-
+    //console.log(geometryName,geometryValue1,geometryValue2)
+    let areaOfPentagon = 0.5 * parseFloat(geometryValue1) * parseFloat(geometryValue2);
+    let area = parseFloat(areaOfPentagon).toFixed(2)
     //show the data
     displayData(geometryName,area)
 });
-
-
 
 
 //last card Ellipse
