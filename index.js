@@ -7,7 +7,13 @@ let serial= 0;
    let inputValue1= getInputValue('input-2');
    let areaOfTriangle = 0.5 * parseFloat(inputValue) * parseFloat(inputValue1);
    let area = parseFloat(areaOfTriangle).toFixed(2);
-   
+
+   //empty input validation error  message..............
+   if(inputValue===''){
+    alert("Input must be filled out");
+    return false;
+   }
+
    displayData(geometryName,area)
 });
 
@@ -18,7 +24,12 @@ let serial= 0;
     let inputValue = getInputValue('first-input');
     let inputValue1= getInputValue('second-input');
     let area = parseInt(inputValue) * parseInt(inputValue1);
-   
+
+   //empty input validation error  message..............
+    if(inputValue===''){
+        alert("Input must be filled out");
+        return false;
+       }
    displayData(geometryName,area);
 });
 
@@ -28,7 +39,6 @@ function getInputValue(id){
     let value =document.getElementById(id).value
     return value;
 }
-
 
 
 //third card Parallelogram
@@ -57,8 +67,6 @@ document.getElementById('forth-card').addEventListener('click',function(){
     //show the data
     displayData(geometryName,area)
 });
-
-
 
 
 //fifth card Pentagon
