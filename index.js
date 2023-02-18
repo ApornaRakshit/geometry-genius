@@ -13,7 +13,14 @@ let serial= 0;
     alert("Input must be filled out");
     return false;
    }
-
+    else if(inputValue1===''){
+    alert("Input must be filled out");
+    return false;
+   }
+   else if(inputValue1!=-'input-1'){
+    alert("Input must be positive");
+    return false;
+   }
    displayData(geometryName,area)
 });
 
@@ -28,6 +35,14 @@ let serial= 0;
    //empty input validation error  message..............
     if(inputValue===''){
         alert("Input must be filled out");
+        return false;
+       }
+    else if(inputValue1===''){
+        alert("Input must be filled out");
+        return false;
+       }
+       else if(inputValue!='input-1'){
+        alert("Input can not be string type");
         return false;
        }
    displayData(geometryName,area);
@@ -111,7 +126,7 @@ function displayData(geometryName,area){
     <td>${serial}.</td>
     <td>${geometryName}</td>
     <td>${area}cm<sup>2</sup></td>
-    <td>${area}m<sup>2</sup></td>
+    
     `;
     container.appendChild(tr);
 }
