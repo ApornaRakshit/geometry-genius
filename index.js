@@ -8,7 +8,7 @@ let serial= 0;
    let areaOfTriangle = 0.5 * parseFloat(inputValue) * parseFloat(inputValue1);
    let area = parseFloat(areaOfTriangle).toFixed(2);
 
-   //empty input validation error  message..............
+   //................empty input validation error  message..............
    if(inputValue===''){
     alert("Input must be filled out");
     return false;
@@ -32,7 +32,7 @@ let serial= 0;
     let inputValue1= getInputValue('second-input');
     let area = parseInt(inputValue) * parseInt(inputValue1);
 
-   //empty input validation error  message..............
+   //................empty input validation error  message..............
     if(inputValue===''){
         alert("Input must be filled out");
         return false;
@@ -116,7 +116,6 @@ document.getElementById('last-card').addEventListener('click',function(){
 });
 
 
-
 //............common function for showing data..............
 function displayData(geometryName,area){
     let container = document.getElementById('table-container')
@@ -126,13 +125,11 @@ function displayData(geometryName,area){
     <td>${serial}.</td>
     <td>${geometryName}</td>
     <td>${area}cm<sup>2</sup></td>
-    
     `;
     container.appendChild(tr);
 }
  //mouse over part 
 var color = [, "#3C9EE7", "#E7993C","#E73C99", "#3CE746", "#E7993C","#a991f7","#ffffff","#37cdbe","#f6d860",'#1EA1F1',"#1C96E1"];
-  
 document.getElementById('cards').addEventListener("mouseover",function() {
 document.getElementById('cards').style.background = color[Math.floor(Math.random() * color.length)];
 });

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q & A</title>
+                    <!--style by css-->
 <style>     
         .faq {
         width:70%;
@@ -39,6 +40,7 @@
 </style>
 </head>
 <body>
+             <!--Question and answer part-->
     <div class="faq">
         <div id="block">
          <p class="question">What is DOM? What is the purpose of DOM<span onclick='faq(this)' class="opener">+</span></p>
@@ -65,24 +67,22 @@
          <p class="answer">A callback function is a function that is passed as an argument to another function so that it can be executed in that other function.</p>  
         </div>
         </div>
- <script>
-            
+        <!-------------javascript part----------->
+<script>          
 function faq(ele)
 {
-var x = ele.parentElement.nextElementSibling.style.cssText;
-if(x=='max-height: 500px;')
+let text = ele.parentElement.nextElementSibling.style.cssText;
+if(text=='max-height: 500px;')
 {    
 ele.style.cssText='transform: rotate(0deg);';     
-ele.parentElement.nextElementSibling.style.cssText = "transition:0.3s;max-height:0px;";    
+ele.parentElement.nextElementSibling.style.cssText ="max-height:0px;";    
 }
 else
 {
-ele.style.cssText='transform: rotate(45deg);';   
-ele.parentElement.nextElementSibling.style.cssText = "max-height:500px;";
+ele.parentElement.nextElementSibling.style.cssText = "max-height:200px;";
 }
 }
-</script>
-        
+</script>       
 </body>
 </html>
 
