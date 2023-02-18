@@ -3,11 +3,11 @@ let serial= 0;
    document.getElementById('first-card').addEventListener('click',function(){
    serial += 1;
    let geometryName = document.getElementById('first-title').innerText;
-   let geometryValue1 = document.getElementById('input-1').value;
-   let geometryValue2 = document.getElementById('input-2').value;
-   let areaOfTriangle = 0.5 * parseFloat(geometryValue1) * parseFloat(geometryValue2);
-   let area = parseFloat(areaOfTriangle).toFixed(2)
-
+   let inputValue = getInputValue('input-1');
+   let inputValue1= getInputValue('input-2');
+   let areaOfTriangle = 0.5 * parseFloat(inputValue) * parseFloat(inputValue1);
+   let area = parseFloat(areaOfTriangle).toFixed(2);
+   
    displayData(geometryName,area)
 });
 
@@ -15,12 +15,19 @@ let serial= 0;
    document.getElementById('second-card').addEventListener('click',function(){
     serial +=1;
     let geometryName = document.getElementById('second-title').innerText;
-    let geometryValue1 = document.getElementById('first-input').value;
-    let geometryValue2 = document.getElementById('second-input').value;
-    let area = parseInt(geometryValue1) * parseInt(geometryValue2);
+    let inputValue = getInputValue('first-input');
+    let inputValue1= getInputValue('second-input');
+    let area = parseInt(inputValue) * parseInt(inputValue1);
    
-   displayData(geometryName,area)
+   displayData(geometryName,area);
 });
+
+
+// ............common function for input field.............//
+function getInputValue(id){
+    let value =document.getElementById(id).value
+    return value;
+}
 
 
 
@@ -37,7 +44,6 @@ document.getElementById('third-card').addEventListener('click',function(){
     displayData(geometryName,area)
 });
 
-
 //forth card Rhombus
 document.getElementById('forth-card').addEventListener('click',function(){
     //get data from using html id
@@ -52,14 +58,18 @@ document.getElementById('forth-card').addEventListener('click',function(){
     displayData(geometryName,area)
 });
 
+
+
+
 //fifth card Pentagon
 document.getElementById('fifth-card').addEventListener('click',function(){
     //get data from using html id
     serial += 1;
+    
     let geometryName = document.getElementById('fifth-name').innerText;
     let geometryValue1 = document.getElementById("v-1").innerText;
     let geometryValue2 = document.getElementById("v-2").innerText;
-    //console.log(geometryName,geometryValue1,geometryValue2)
+    console.log(geometryName,geometryValue1,geometryValue2)
     let areaOfPentagon = 0.5 * parseFloat(geometryValue1) * parseFloat(geometryValue2);
     let area = parseFloat(areaOfPentagon).toFixed(2)
     //show the data
@@ -84,11 +94,7 @@ document.getElementById('last-card').addEventListener('click',function(){
 
 
 
-
-
-
-
-//common function for showing data
+//............common function for showing data..............
 function displayData(geometryName,area){
     let container = document.getElementById('table-container')
     let tr= document.createElement("tr");
@@ -101,16 +107,9 @@ function displayData(geometryName,area){
     `;
     container.appendChild(tr);
 }
-
-
-
-
-var color = [, "#3C9EE7", "#E7993C",
-            "#E73C99", "#3CE746", "#E7993C","#a991f7","#ffffff","#37cdbe","#f6d860",'#1EA1F1',"#1C96E1"];
+ //mouse over part 
+var color = [, "#3C9EE7", "#E7993C","#E73C99", "#3CE746", "#E7993C","#a991f7","#ffffff","#37cdbe","#f6d860",'#1EA1F1',"#1C96E1"];
   
-        document.getElementById('card').addEventListener(
-                    "mouseover", function () {
-  
-            document.getElementById('card').style.background 
-                = color[Math.floor(Math.random() * color.length)];
-        });
+document.getElementById('cards').addEventListener("mouseover",function() {
+document.getElementById('cards').style.background = color[Math.floor(Math.random() * color.length)];
+});
