@@ -106,7 +106,7 @@ function displayData(geometryName,area){
 
 
 var color = [, "#3C9EE7", "#E7993C",
-            "#E73C99", "#3CE746", "#E7993C","#a991f7","#ffffff","#37cdbe","#f6d860",'#1EA1F1','#1C96E1'];
+            "#E73C99", "#3CE746", "#E7993C","#a991f7","#ffffff","#37cdbe","#f6d860",'#1EA1F1',"#1C96E1"];
   
         document.getElementById('card').addEventListener(
                     "mouseover", function () {
